@@ -1,4 +1,3 @@
-const { createServer } = require('http');
 const express = require('express');
 const compression = require('compression');
 const morgan = require('morgan');
@@ -25,8 +24,6 @@ if(!dev) {
 if(dev) {
     app.use(morgan('dev'));
 }
-
-const server = createServer(app);
 
 app.listen(PORT, err => {
     if(err) {
